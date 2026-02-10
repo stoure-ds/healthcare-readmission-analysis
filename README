@@ -1,0 +1,66 @@
+Predicting 30-Day Hospital Readmissions
+
+Business Problem
+
+Hospital readmissions within 30 days are costly and penalized by insurers.
+Healthcare providers aim to identify high-risk patients early to improve care and reduce financial penalties.
+
+This project analyzes 100,000+ hospital records to explore clinical drivers of early readmission and evaluate whether patient risk can be predicted using structured administrative data.
+
+Dataset
+
+Source: UCI Diabetes Readmission Dataset
+Records: 101,766 hospital encounters
+Features: 50 clinical and demographic variables
+
+The dataset includes patient demographics, medications, diagnoses, hospital stay duration, and readmission status.
+
+Exploratory Findings
+
+Key risk patterns observed:
+	•	Readmitted patients have longer initial hospital stays
+	•	Higher medication burden correlates with readmission risk
+	•	Emergency visits are nearly twice as common in readmitted patients
+
+These patterns suggest that clinical complexity and unstable outpatient care are major contributors to early readmission.
+
+Modeling Approach
+
+A logistic regression classifier was trained to predict 30-day readmission.
+
+Because the dataset is highly imbalanced (~11% readmitted), class-balanced modeling was applied to improve minority detection.
+
+Model evaluation metrics:
+	•	Recall (high-risk patients): 43%
+	•	Accuracy: 57%
+	•	AUC: 0.51
+
+
+Interpretation
+
+The model shows limited predictive power using structured hospital data alone. This suggests that readmission risk likely depends on additional factors not captured in administrative records, such as social determinants, post-discharge support, and clinical notes.
+
+This reflects a real-world challenge in healthcare analytics: data limitations often constrain predictive performance.
+
+Recommendations
+
+Hospitals should consider:
+	•	Enhanced discharge planning for high medication patients
+	•	Targeted follow-up for frequent emergency visitors
+	•	Integration of social and behavioral data into risk models
+
+
+Skills Demonstrated
+	•	Python (Pandas, NumPy, Matplotlib, Seaborn)
+	•	Data cleaning & feature engineering
+	•	Healthcare analytics reasoning
+	•	Logistic regression modeling
+	•	Class imbalance handling
+	•	Model evaluation (ROC, recall, precision)
+	•	Business storytelling
+
+
+Author
+
+Seydou Toure
+Data Analyst | Healthcare Analytics | Python & ML
